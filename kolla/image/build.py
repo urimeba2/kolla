@@ -86,6 +86,7 @@ UNBUILDABLE_IMAGES = {
     },
 
     'binary': {
+        "adjutant-base",
         "bifrost-base",
         "blazar-base",
         "cyborg-base",

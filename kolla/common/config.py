@@ -89,6 +89,7 @@ _PROFILE_OPTS = [
                 help='Main images'),
     cfg.ListOpt('aux',
                 default=[
+                    'adjutant',
                     'aodh',
                     'blazar',
                     'cloudkitty',
@@ -282,6 +283,10 @@ SOURCES = {
         'type': 'url',
         'location': ('$tarballs_base/openstack/requirements/'
                      'requirements-${openstack_branch}.tar.gz')},
+    'adjutant-base': {
+        'type': 'url',
+        'location': ('$tarballs_base/openstack/adjutant/'
+                     'adjutant-${openstack_branch}.tar.gz')},
     'aodh-base': {
         'type': 'url',
         'location': ('$tarballs_base/openstack/aodh/'
@@ -343,6 +348,10 @@ SOURCES = {
         'type': 'url',
         'location': ('$tarballs_base/openstack/horizon/'
                      'horizon-${openstack_branch}.tar.gz')},
+    'horizon-plugin-adjutant-dashboard': {
+        'type': 'url',
+        'location': ('$tarballs_base/openstack/adjutant-ui/'
+                     'adjutant-ui-${openstack_branch}.tar.gz')},
     'horizon-plugin-blazar-dashboard': {
         'type': 'url',
         'location': ('$tarballs_base/openstack/blazar-dashboard/'
@@ -1021,6 +1030,10 @@ USERS = {
     'masakari-user': {
         'uid': 42485,
         'gid': 42485,
+    },
+    'adjutant-user': {
+        'uid': 42486,
+        'gid': 42486,
     }
 }
 
