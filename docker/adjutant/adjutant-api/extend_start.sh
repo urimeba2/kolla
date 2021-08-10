@@ -6,4 +6,6 @@ if [[ "${!KOLLA_BOOTSTRAP[@]}" ]]; then
     adjutant-api migrate
     exit 0
 fi
+
+
 . /usr/local/bin/kolla_httpd_setup
