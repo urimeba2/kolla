@@ -66,7 +66,7 @@ function config_dashboard {
 
 function config_adjutant_dashboard {
     for file in ${SITE_PACKAGES}/adjutant_ui/enabled/_*[^__].py; do
-        config_dashboard "${ENABLE_ADJUTANT}" \
+        config_dashboard "${ENABLE_ADJUTANT:-no}" \
             "${SITE_PACKAGES}/adjutant_ui/enabled/${file##*/}" \
             "${SITE_PACKAGES}/openstack_dashboard/local/enabled/${file##*/}"
     done
