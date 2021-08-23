@@ -36,7 +36,9 @@ RUN ln -s adjutant-base-source/* adjutant \
     && mkdir -p /etc/adjutant  \
     && cp -r /adjutant/etc/* /etc/adjutant/ \
     && chown -R adjutant: /etc/adjutant \
-    && pip install -r /adjutant/requirements.txt
+    && pip install -r /adjutant/requirements.txt \
+    && pip install sendgrid==6.1.1 \
+    && pip install python-dotenv==0.18.0
 
 {% endif %}
 
